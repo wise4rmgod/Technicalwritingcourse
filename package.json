@@ -6,7 +6,6 @@
   "license": "MIT",
   "scripts": {
     "dev": "hugo server --disableFastRender --noHTTPCache",
-    "dev:drafts": "exec-bin node_modules/.bin/hugo/hugo server --bind=0.0.0.0 --disableFastRender --baseURL=http://localhost --noHTTPCache --buildDrafts",
     "create": "hugo new",
     "lint": "npm run lint:markdown",
     "lint:scripts": "eslint --cache themes/doks/assets/js",
@@ -20,9 +19,7 @@
     "clean:install": "shx rm -rf node_modules package-lock.json yarn.lock pnpm-lock.yaml",
     "clean:lint": "shx rm -rf .eslintcache .stylelintcache",
     "preinfo": "npm version",
-    "info": "npm list",
-    "postinfo": "exec-bin node_modules/.bin/hugo/hugo version",
-    "postinstall": "shx rm -rf node_modules/.bin/hugo && shx mkdir -p node_modules/.bin/hugo && [ -d node_modules/gethyas/node_modules/.bin/hugo ] && shx cp node_modules/gethyas/node_modules/.bin/hugo/* node_modules/.bin/hugo || echo 'Hugo binary not found, skipping copy.'"
+    "info": "npm list"
   },
   "dependencies": {
     "@hyas/doks-core": "^1.6.1",
